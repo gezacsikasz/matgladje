@@ -3,16 +3,22 @@ import { auth } from "@/lib/auth";
 
 // Optimistik kontroll (läser bara JWT-cookien, ingen databasfråga) — se
 // Next.js proxy-guiden: den riktiga behörighetskontrollen görs i
-// src/lib/dal.ts och körs i varje admin-sida/server action, inte bara här.
+// src/lib/dal.ts och körs i varje sida/server action, inte bara här.
 export default auth((req) => {
-  const isAdminRoute = req.nextUrl.pathname.startsWith("/admin");
-  if (isAdminRoute && req.auth?.user?.role !== "ADMIN") {
+  const { pathname } = req.nextUrl;
+  const isAdminRoute = pathname.startsWith("/admin");
+  const isMedlemRoute = pathname.startsWith("/skafferi") || pathname.startsWith("/min-sida");
+
+  const needsRedirect =
+    (isAdminRoute && req.auth?.user?.role !== "ADMIN") || (isMedlemRoute && !req.auth?.user);
+
+  if (needsRedirect) {
     const url = new URL("/logga-in", req.nextUrl.origin);
-    url.searchParams.set("callbackUrl", req.nextUrl.pathname);
+    url.searchParams.set("callbackUrl", pathname);
     return NextResponse.redirect(url);
   }
 });
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: ["/admin/:path*", "/skafferi/:path*", "/min-sida/:path*"],
 };

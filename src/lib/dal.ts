@@ -18,3 +18,20 @@ export const requireAdmin = cache(async () => {
   }
   return user;
 });
+
+// Motsvarande koll för medlemsvyn: kräver en inloggad användare med kopplat
+// hushåll (role MEDLEM). Returnerar hushållet inklusive medlemmar.
+export const requireHousehold = cache(async () => {
+  const session = await auth();
+  if (!session?.user) {
+    redirect("/logga-in");
+  }
+  const user = await prisma.user.findUnique({
+    where: { id: session.user.id },
+    include: { household: { include: { members: true } } },
+  });
+  if (!user || !user.household) {
+    redirect("/logga-in");
+  }
+  return user.household;
+});
