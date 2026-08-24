@@ -44,6 +44,15 @@ type SeedData = {
   producers: SeedProducer[];
 };
 
+type SeedDemoProducer = {
+  namn: string;
+  region?: string;
+  egenWebb?: string;
+  beskrivning?: string;
+  kapacitetKrPerManad?: number;
+  produkter: string[];
+};
+
 async function main() {
   const raw = readFileSync(join(__dirname, "seed-data/skafferi.json"), "utf-8");
   const data: SeedData = JSON.parse(raw);
@@ -131,6 +140,37 @@ async function main() {
         where: { productId_producerId: { productId, producerId: producer.id } },
         update: {},
         create: { productId, producerId: producer.id },
+      });
+    }
+  }
+
+  console.log("Seedar kompletterande demo-producentkopplingar (från prototypen)...");
+  const demoRaw = readFileSync(join(__dirname, "seed-data/demo-producers.json"), "utf-8");
+  const demoData: { producers: SeedDemoProducer[] } = JSON.parse(demoRaw);
+  for (const prod of demoData.producers) {
+    const existing = await prisma.producer.findFirst({ where: { namn: prod.namn } });
+    const producer =
+      existing ??
+      (await prisma.producer.create({
+        data: {
+          namn: prod.namn,
+          region: prod.region,
+          egenWebb: prod.egenWebb,
+          beskrivning: prod.beskrivning,
+          kapacitetKrPerManad: prod.kapacitetKrPerManad,
+          sourcingKalla: "Demo-data från prototypen — ej verifierad kandidat",
+          status: "KANDIDAT",
+        },
+      }));
+    for (const productId of prod.produkter) {
+      await prisma.productProducer.upsert({
+        where: { productId_producerId: { productId, producerId: producer.id } },
+        update: {},
+        create: { productId, producerId: producer.id },
+      });
+      await prisma.product.update({
+        where: { id: productId },
+        data: { sourcingStatus: null, sourcingNote: null },
       });
     }
   }
