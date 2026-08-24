@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: matgladje
+      POSTGRES_PASSWORD: matgladje
+      POSTGRES_DB: matgladje
+    ports:
+      - "5432:5432"
+    volumes:
+      - matgladje-db:/var/lib/postgresql/data
+
+volumes:
+  matgladje-db:
