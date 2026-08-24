@@ -1,0 +1,198 @@
+// Matglädje — datamodell, steg 1 (datamodell + admin-backend).
+// Se MATGLADJE_HANDOVER.md avsnitt 5 för bakgrund och öppna frågor.
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  MEDLEM
+  HANDLARE
+  ADMIN
+}
+
+// KANDIDAT är utöver avsnitt 6:s ansökt/godkänd/inaktiv — täcker producenter som är
+// identifierade som prospekt (från Gårdsguiden/KRAV-data) men ännu inte kontaktade
+// eller inbjudna att skapa konto. Se plan-dokumentationen för resonemang.
+enum ProducerStatus {
+  KANDIDAT
+  ANSOKT
+  GODKAND
+  INAKTIV
+}
+
+enum PaymentMethod {
+  SWISH
+  KONTO
+}
+
+enum InviteType {
+  HUSHALL
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  role         Role
+  householdId  String?  @unique
+  household    Household? @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  createdAt    DateTime @default(now())
+}
+
+model InviteToken {
+  id               String     @id @default(cuid())
+  token            String     @unique
+  type             InviteType @default(HUSHALL)
+  email            String?
+  householdNameHint String?
+  createdByUserId  String?
+  usedAt           DateTime?
+  expiresAt        DateTime?
+  createdAt        DateTime   @default(now())
+}
+
+model Household {
+  id        String   @id @default(cuid())
+  namn      String
+  adress    String?
+  epost     String
+  mobil     String?
+  aktiv     Boolean  @default(true)
+  createdAt DateTime @default(now())
+
+  members    HouseholdMember[]
+  user       User?
+  orderLines OrderLine[]
+}
+
+model HouseholdMember {
+  id          String @id @default(cuid())
+  householdId String
+  household   Household @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  namn        String?
+  alder       Int
+}
+
+model Category {
+  id        String @id @default(cuid())
+  namn      String @unique
+  sortOrder Int    @default(0)
+
+  products Product[]
+  behov    CategoryBehov?
+}
+
+// Kr/KE/månad för kategorin, härlett ur Behovsmodell-bladets kohortberäkning.
+// Driver tallriksmodellens referensvärde (medlemsvy, steg 2) — inte använt i steg 1
+// men seedas nu eftersom det är del av samma källdata.
+model CategoryBehov {
+  id               String   @id @default(cuid())
+  categoryId       String   @unique
+  category         Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  krPerKePerManad  Float
+}
+
+model Product {
+  id                String   @id // Produkt-ID från Excel, t.ex. "GRÖ-01"
+  categoryId        String
+  category          Category @relation(fields: [categoryId], references: [id])
+  namn              String
+  enhet             String
+  minstaEnhet       String?
+  malpris           Float
+  butikReferens     Float?
+  ekobutikReferens  Float?
+  rekoReferens      Float?
+  sakerhet          String?
+  kommentar         String?
+  // Sourcingläge från Excel-underlaget för produkter som ännu saknar en
+  // identifierad producentkandidat (t.ex. "Ingen specifik kandidat – sök via
+  // källa" eller "Ej relevant (importvara)"), plus sökuppslag som fritext.
+  // Null när produkten redan har minst en länkad Producer.
+  sourcingStatus    String?
+  sourcingNote      String?
+  createdAt         DateTime @default(now())
+
+  producenter ProductProducer[]
+  orderLines  OrderLine[]
+}
+
+model Producer {
+  id                    String         @id @default(cuid())
+  namn                  String
+  region                String?
+  adress                String?
+  logoUrl               String?
+  beskrivning           String?
+  egenWebb              String?
+  ansvarigNamn          String?
+  ansvarigMobil         String?
+  ansvarigEpost         String?
+  betalmetod            PaymentMethod?
+  swishNr               String?
+  kontoNr               String?
+  kapacitetKrPerManad   Float?
+  status                ProducerStatus @default(KANDIDAT)
+  sourcingKalla         String?
+  sourcingLeveranssatt  String?
+  createdAt             DateTime       @default(now())
+
+  produkter   ProductProducer[]
+  orderLines  OrderLine[]
+}
+
+model ProductProducer {
+  id                 String   @id @default(cuid())
+  productId          String
+  product            Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  producerId         String
+  producer           Producer @relation(fields: [producerId], references: [id], onDelete: Cascade)
+  kilioprisForslag   Float?
+
+  periodNoter ProductPeriodNote[]
+
+  @@unique([productId, producerId])
+}
+
+model ProductPeriodNote {
+  id                 String          @id @default(cuid())
+  productProducerId  String
+  productProducer    ProductProducer @relation(fields: [productProducerId], references: [id], onDelete: Cascade)
+  periodId           String
+  period              Period          @relation(fields: [periodId], references: [id], onDelete: Cascade)
+  note               String
+
+  @@unique([productProducerId, periodId])
+}
+
+model Period {
+  id            String   @id @default(cuid())
+  num           Int      @unique
+  startDatum    DateTime
+  slutDatum     DateTime
+  deadlineDatum DateTime
+
+  orderLines OrderLine[]
+  periodNoter ProductPeriodNote[]
+}
+
+model OrderLine {
+  id                    String   @id @default(cuid())
+  householdId           String
+  household             Household @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  periodId              String
+  period                Period    @relation(fields: [periodId], references: [id], onDelete: Cascade)
+  productId             String
+  product               Product   @relation(fields: [productId], references: [id])
+  producerId            String
+  producer              Producer  @relation(fields: [producerId], references: [id])
+  mangd                 Float
+  prisVidKoptillfalle   Float
+  createdAt             DateTime  @default(now())
+}

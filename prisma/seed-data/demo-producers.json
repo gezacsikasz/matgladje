@@ -1,0 +1,103 @@
+{
+  "_provenance": "Kompletterande producentkopplingar hämtade från den klickbara prototypen (matgladje_app.html), inte från Excel-underlaget. Namn/region/beskrivning för de producenter som INTE redan fanns i skafferi.json är påhittade demo-platshållare för prototypen, INTE verifierade riktiga gårdar från Gårdsguiden/KRAV — de ska betraktas som exempel att fylla ut demot med, inte som research att kontakta förrän de är verifierade. Producenter som redan fanns (matchas på namn) får bara fler produktlänkar, inte överskrivna kontaktuppgifter.",
+  "producers": [
+    { "namn": "Everhags Gårdsbutik", "produkter": ["GRÖ-05"] },
+    { "namn": "Gunnarshögs Gård", "produkter": ["KRY-04", "OLJ-02"] },
+    {
+      "namn": "Kullens Fruktodling",
+      "region": "Kullabygden, Skåne",
+      "beskrivning": "Äppel-, päron- och jordgubbsodling i en av landets bästa fruktbygder. Familjeägt sedan tre generationer.",
+      "egenWebb": "kullensfruktodling.se",
+      "kapacitetKrPerManad": 6000,
+      "produkter": ["FRU-01", "FRU-02", "FRU-03"]
+    },
+    {
+      "namn": "Änggårdens Bärodling",
+      "region": "Bohuslän",
+      "beskrivning": "Vilda och odlade blåbär från skogskanten kring gården. Plockas för hand i säsong.",
+      "egenWebb": "anggardensbar.se",
+      "kapacitetKrPerManad": 3000,
+      "produkter": ["FRU-04"]
+    },
+    {
+      "namn": "Åkerbo Lantbruk",
+      "region": "Västergötland",
+      "beskrivning": "Torkade baljväxter — ärtor, bönor och åkerböna — odlade i växtföljd på gårdens egna åkrar.",
+      "egenWebb": "akerbolantbruk.se",
+      "kapacitetKrPerManad": 4000,
+      "produkter": ["BAL-01", "BAL-02", "BAL-03"]
+    },
+    {
+      "namn": "Kvarnbacka Kvarn",
+      "region": "Skaraborg",
+      "beskrivning": "Liten stenkvarn som mal eget och närodlat spannmål till mjöl och gryn, i småskaliga satser.",
+      "egenWebb": "kvarnbackakvarn.se",
+      "kapacitetKrPerManad": 7000,
+      "produkter": ["SPA-01", "SPA-02", "SPA-03", "SPA-04"]
+    },
+    {
+      "namn": "Klockargården",
+      "region": "Halland",
+      "beskrivning": "Långsamväxande kycklingraser som får ta den tid de behöver — smaken märks.",
+      "egenWebb": "klockargarden.se",
+      "kapacitetKrPerManad": 6500,
+      "produkter": ["KÖT-03"]
+    },
+    {
+      "namn": "Björnö Fiskodling",
+      "region": "Bohuslän",
+      "beskrivning": "Regnbåge och lax i öppna kassar i skärgården, foder utan onödiga tillsatser.",
+      "egenWebb": "bjornofiskodling.se",
+      "kapacitetKrPerManad": 5000,
+      "produkter": ["FIS-01"]
+    },
+    {
+      "namn": "Skärgårdens Fiske",
+      "region": "Bohuslän",
+      "beskrivning": "Enskild yrkesfiskare med garn och burar. Strömming, sill och insjöfisk efter säsong och fångst.",
+      "egenWebb": "skargardensfiske.se",
+      "kapacitetKrPerManad": 4500,
+      "produkter": ["FIS-02", "FIS-03"]
+    },
+    {
+      "namn": "Sörgårdens Nötodling",
+      "region": "Skåne",
+      "beskrivning": "Ett litet valnötslund i sydligaste Skåne — ett av få svenska försök i sitt slag.",
+      "egenWebb": "sorgardensnot.se",
+      "kapacitetKrPerManad": 2500,
+      "produkter": ["NÖT-01"]
+    },
+    {
+      "namn": "Surkålsboden",
+      "region": "Västra Götaland",
+      "beskrivning": "Småskalig mjölksyrajäsning av vitkål och andra rotsaker, i lertunna på traditionellt vis.",
+      "egenWebb": "surkalsboden.se",
+      "kapacitetKrPerManad": 3000,
+      "produkter": ["VIN-02"]
+    },
+    {
+      "namn": "Svampgården i Dalsland",
+      "region": "Dalsland",
+      "beskrivning": "Odlad champinjon och säsongsplockad kantarell från Dalslands skogar.",
+      "egenWebb": "svampgardendalsland.se",
+      "kapacitetKrPerManad": 4000,
+      "produkter": ["SVA-01", "SVA-02"]
+    },
+    {
+      "namn": "Ölands Havssalteri",
+      "region": "Öland",
+      "beskrivning": "Havssalt indunstat i små satser med sol och vind från Kalmarsund.",
+      "egenWebb": "olandshavssalteri.se",
+      "kapacitetKrPerManad": 2000,
+      "produkter": ["SAL-01"]
+    },
+    {
+      "namn": "Sekelgårdens Bageri",
+      "region": "Västergötland",
+      "beskrivning": "Knäckebröd och rågbröd bakat efter ett recept som gått i arv sedan sekelskiftet.",
+      "egenWebb": "sekelgardensbageri.se",
+      "kapacitetKrPerManad": 4000,
+      "produkter": ["BRÖ-02"]
+    }
+  ]
+}

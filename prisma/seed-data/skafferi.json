@@ -1,0 +1,770 @@
+{
+  "categories": [
+    {
+      "namn": "Grönsaker",
+      "sortOrder": 0,
+      "krPerKePerManad": 111.6667
+    },
+    {
+      "namn": "Frukt & bär",
+      "sortOrder": 1,
+      "krPerKePerManad": 60.25
+    },
+    {
+      "namn": "Baljväxter",
+      "sortOrder": 2,
+      "krPerKePerManad": 8.0833
+    },
+    {
+      "namn": "Spannmål",
+      "sortOrder": 3,
+      "krPerKePerManad": 47.5833
+    },
+    {
+      "namn": "Kött",
+      "sortOrder": 4,
+      "krPerKePerManad": 269.4167
+    },
+    {
+      "namn": "Fisk",
+      "sortOrder": 5,
+      "krPerKePerManad": 76.0
+    },
+    {
+      "namn": "Mejeri & ägg",
+      "sortOrder": 6,
+      "krPerKePerManad": 430.75
+    },
+    {
+      "namn": "Nötter",
+      "sortOrder": 7,
+      "krPerKePerManad": 12.9167
+    },
+    {
+      "namn": "Kryddor/örter",
+      "sortOrder": 8,
+      "krPerKePerManad": 40.9167
+    },
+    {
+      "namn": "Matolja",
+      "sortOrder": 9,
+      "krPerKePerManad": 80.0833
+    },
+    {
+      "namn": "Vinäger/syrat",
+      "sortOrder": 10,
+      "krPerKePerManad": 12.8333
+    },
+    {
+      "namn": "Svamp",
+      "sortOrder": 11,
+      "krPerKePerManad": 18.5
+    },
+    {
+      "namn": "Salt",
+      "sortOrder": 12,
+      "krPerKePerManad": 9.5
+    },
+    {
+      "namn": "Sötning",
+      "sortOrder": 13,
+      "krPerKePerManad": 15.4167
+    },
+    {
+      "namn": "Bröd",
+      "sortOrder": 14,
+      "krPerKePerManad": 145.0
+    }
+  ],
+  "products": [
+    {
+      "id": "GRÖ-01",
+      "kategori": "Grönsaker",
+      "namn": "Potatis",
+      "enhet": "kr/kg",
+      "butikReferens": 24,
+      "ekobutikReferens": 31,
+      "rekoReferens": 22,
+      "malpris": 20,
+      "sakerhet": "Verifierat",
+      "kommentar": null,
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "GRÖ-02",
+      "kategori": "Grönsaker",
+      "namn": "Morot",
+      "enhet": "kr/kg",
+      "butikReferens": 20,
+      "ekobutikReferens": 26,
+      "rekoReferens": 22,
+      "malpris": 20,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": null,
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "GRÖ-03",
+      "kategori": "Grönsaker",
+      "namn": "Gul lök",
+      "enhet": "kr/kg",
+      "butikReferens": 21,
+      "ekobutikReferens": 27,
+      "rekoReferens": 22,
+      "malpris": 20,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": null,
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "GRÖ-04",
+      "kategori": "Grönsaker",
+      "namn": "Vitkål",
+      "enhet": "kr/kg",
+      "butikReferens": 15,
+      "ekobutikReferens": 20,
+      "rekoReferens": 17,
+      "malpris": 15,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": null,
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "GRÖ-05",
+      "kategori": "Grönsaker",
+      "namn": "Tomat, växthus",
+      "enhet": "kr/kg",
+      "butikReferens": 45,
+      "ekobutikReferens": 60,
+      "rekoReferens": 55,
+      "malpris": 50,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Växthusodling kostar oavsett kanal",
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Sök gardsnara.se, filter Frukt och grönt > Tomat, region efter val"
+    },
+    {
+      "id": "FRU-01",
+      "kategori": "Frukt & bär",
+      "namn": "Äpple",
+      "enhet": "kr/kg",
+      "butikReferens": 30,
+      "ekobutikReferens": 40,
+      "rekoReferens": 30,
+      "malpris": 27,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Säsong",
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Sök gardsnara.se / gardsbutiker.se, kategori Frukt och grönt"
+    },
+    {
+      "id": "FRU-02",
+      "kategori": "Frukt & bär",
+      "namn": "Päron",
+      "enhet": "kr/kg",
+      "butikReferens": 32,
+      "ekobutikReferens": 42,
+      "rekoReferens": 32,
+      "malpris": 29,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Säsong",
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Sök gardsnara.se / gardsbutiker.se, kategori Frukt och grönt"
+    },
+    {
+      "id": "FRU-03",
+      "kategori": "Frukt & bär",
+      "namn": "Jordgubbar",
+      "enhet": "kr/kg",
+      "butikReferens": 75,
+      "ekobutikReferens": 95,
+      "rekoReferens": 85,
+      "malpris": 77,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Säsong",
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Sök gardsnara.se / gardsbutiker.se, kategori Frukt och grönt (självplock vanligt)"
+    },
+    {
+      "id": "FRU-04",
+      "kategori": "Frukt & bär",
+      "namn": "Blåbär",
+      "enhet": "kr/kg",
+      "butikReferens": 100,
+      "ekobutikReferens": 120,
+      "rekoReferens": 60,
+      "malpris": 54,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Vilda/lokala klart billigare än odlat/import",
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Sök gardsnara.se, eller lokal bärplockare/naturbruksskola för vilda bär"
+    },
+    {
+      "id": "BAL-01",
+      "kategori": "Baljväxter",
+      "namn": "Gula ärtor",
+      "enhet": "kr/kg",
+      "butikReferens": 30,
+      "ekobutikReferens": 38,
+      "rekoReferens": 37,
+      "malpris": 33,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": null,
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Sök matvision.se / gardsnara.se, kategori Bröd och spannmål (baljväxter ofta samodlat)"
+    },
+    {
+      "id": "BAL-02",
+      "kategori": "Baljväxter",
+      "namn": "Bruna bönor",
+      "enhet": "kr/kg",
+      "butikReferens": 35,
+      "ekobutikReferens": 44,
+      "rekoReferens": 50,
+      "malpris": 45,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Ovanligt med svenskodlat",
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Sök matvision.se / gardsnara.se, kategori Bröd och spannmål"
+    },
+    {
+      "id": "BAL-03",
+      "kategori": "Baljväxter",
+      "namn": "Åkerböna",
+      "enhet": "kr/kg",
+      "butikReferens": 40,
+      "ekobutikReferens": 48,
+      "rekoReferens": 42,
+      "malpris": 38,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Växande svensk nischodling",
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Sök matvision.se / gardsnara.se, kategori Bröd och spannmål (nischodling, växande)"
+    },
+    {
+      "id": "SPA-01",
+      "kategori": "Spannmål",
+      "namn": "Havregryn",
+      "enhet": "kr/kg",
+      "butikReferens": 17,
+      "ekobutikReferens": 25,
+      "rekoReferens": 35,
+      "malpris": 31,
+      "sakerhet": "Verifierat",
+      "kommentar": "Eko-påslag ca 44% verifierat",
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Sök gardsnara.se, kategori Bröd och spannmål, filtrera på kvarn/mjöl"
+    },
+    {
+      "id": "SPA-02",
+      "kategori": "Spannmål",
+      "namn": "Rågmjöl",
+      "enhet": "kr/kg",
+      "butikReferens": 20,
+      "ekobutikReferens": 28,
+      "rekoReferens": 30,
+      "malpris": 27,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": null,
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Sök gardsnara.se, kategori Bröd och spannmål"
+    },
+    {
+      "id": "SPA-03",
+      "kategori": "Spannmål",
+      "namn": "Vetemjöl",
+      "enhet": "kr/kg",
+      "butikReferens": 12,
+      "ekobutikReferens": 20,
+      "rekoReferens": 25,
+      "malpris": 22,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": null,
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Sök gardsnara.se, kategori Bröd och spannmål"
+    },
+    {
+      "id": "SPA-04",
+      "kategori": "Spannmål",
+      "namn": "Korngryn",
+      "enhet": "kr/kg",
+      "butikReferens": 17,
+      "ekobutikReferens": 24,
+      "rekoReferens": 25,
+      "malpris": 22,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": null,
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Sök gardsnara.se, kategori Bröd och spannmål"
+    },
+    {
+      "id": "KÖT-01",
+      "kategori": "Kött",
+      "namn": "Nötfärs",
+      "enhet": "kr/kg",
+      "butikReferens": 105,
+      "ekobutikReferens": 145,
+      "rekoReferens": 120,
+      "malpris": 108,
+      "sakerhet": "Verifierat",
+      "kommentar": null,
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "KÖT-02",
+      "kategori": "Kött",
+      "namn": "Fläskkotlett",
+      "enhet": "kr/kg",
+      "butikReferens": 110,
+      "ekobutikReferens": 150,
+      "rekoReferens": 125,
+      "malpris": 113,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": null,
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "KÖT-03",
+      "kategori": "Kött",
+      "namn": "Kycklingfilé",
+      "enhet": "kr/kg",
+      "butikReferens": 115,
+      "ekobutikReferens": 160,
+      "rekoReferens": 155,
+      "malpris": 140,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Långsamväxande raser dyrare",
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Ingen kandidat med kyckling hittad i denna sökning – sök gardsnara.se kategori Kött, chark och fågel"
+    },
+    {
+      "id": "KÖT-04",
+      "kategori": "Kött",
+      "namn": "Lammkött",
+      "enhet": "kr/kg",
+      "butikReferens": 185,
+      "ekobutikReferens": 240,
+      "rekoReferens": 215,
+      "malpris": 194,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Redan premium även i butik",
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "FIS-01",
+      "kategori": "Fisk",
+      "namn": "Odlad lax/regnbåge",
+      "enhet": "kr/kg",
+      "butikReferens": 155,
+      "ekobutikReferens": 190,
+      "rekoReferens": 175,
+      "malpris": 158,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": null,
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Sök gardsnara.se kategori Fisk och skaldjur, eller lokalt vattenbruk i regionen"
+    },
+    {
+      "id": "FIS-02",
+      "kategori": "Fisk",
+      "namn": "Strömming/sill",
+      "enhet": "kr/kg",
+      "butikReferens": 65,
+      "ekobutikReferens": 80,
+      "rekoReferens": 55,
+      "malpris": 50,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Ofta billigare från lokal fiskare i säsong",
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Sök lokal fiskauktion/hamn (t.ex. Simrishamn, Västervik) eller gardsnara.se"
+    },
+    {
+      "id": "FIS-03",
+      "kategori": "Fisk",
+      "namn": "Gös/abborre",
+      "enhet": "kr/kg",
+      "butikReferens": 300,
+      "ekobutikReferens": null,
+      "rekoReferens": 200,
+      "malpris": 180,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Knappt i vanlig butik, ingen bra eko-referens",
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Sök lokal insjöfiskare, ofta ej digitalt synliga – fråga i bygden eller fiskeförening"
+    },
+    {
+      "id": "MEJ-01",
+      "kategori": "Mejeri & ägg",
+      "namn": "Mjölk",
+      "enhet": "kr/l",
+      "butikReferens": 14,
+      "ekobutikReferens": 17,
+      "rekoReferens": 21,
+      "malpris": 19,
+      "sakerhet": "Verifierat",
+      "kommentar": null,
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "MEJ-02",
+      "kategori": "Mejeri & ägg",
+      "namn": "Smör",
+      "enhet": "kr/kg",
+      "butikReferens": 132,
+      "ekobutikReferens": 165,
+      "rekoReferens": 175,
+      "malpris": 158,
+      "sakerhet": "Verifierat",
+      "kommentar": null,
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "MEJ-03",
+      "kategori": "Mejeri & ägg",
+      "namn": "Ägg",
+      "enhet": "kr/förp",
+      "butikReferens": 40,
+      "ekobutikReferens": 57,
+      "rekoReferens": 47,
+      "malpris": 42,
+      "sakerhet": "Verifierat",
+      "kommentar": "Eko-påslag ca 42% verifierat",
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "MEJ-04",
+      "kategori": "Mejeri & ägg",
+      "namn": "Hushållsost",
+      "enhet": "kr/kg",
+      "butikReferens": 125,
+      "ekobutikReferens": 160,
+      "rekoReferens": 185,
+      "malpris": 167,
+      "sakerhet": "Verifierat",
+      "kommentar": null,
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "NÖT-01",
+      "kategori": "Nötter",
+      "namn": "Valnötter",
+      "enhet": "kr/kg",
+      "butikReferens": 150,
+      "ekobutikReferens": 190,
+      "rekoReferens": null,
+      "malpris": 155,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Ren importvara, ingen meningsfull REKO-referens",
+      "sourcingStatus": "Ej relevant (importvara)",
+      "sourcingNote": "Ren importvara, ingen svensk odling av relevans"
+    },
+    {
+      "id": "KRY-01",
+      "kategori": "Kryddor/örter",
+      "namn": "Persilja",
+      "enhet": "kr/knippe",
+      "butikReferens": 18,
+      "ekobutikReferens": 22,
+      "rekoReferens": 15,
+      "malpris": 13,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": null,
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "KRY-02",
+      "kategori": "Kryddor/örter",
+      "namn": "Dill",
+      "enhet": "kr/knippe",
+      "butikReferens": 18,
+      "ekobutikReferens": 22,
+      "rekoReferens": 15,
+      "malpris": 13,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": null,
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "KRY-03",
+      "kategori": "Kryddor/örter",
+      "namn": "Timjan",
+      "enhet": "kr/knippe",
+      "butikReferens": 20,
+      "ekobutikReferens": 25,
+      "rekoReferens": 18,
+      "malpris": 16,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": null,
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "KRY-04",
+      "kategori": "Kryddor/örter",
+      "namn": "Svartpeppar",
+      "enhet": "kr/kg",
+      "butikReferens": 200,
+      "ekobutikReferens": 240,
+      "rekoReferens": null,
+      "malpris": 210,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Ren importvara",
+      "sourcingStatus": "Ej relevant (importvara)",
+      "sourcingNote": "Ren importvara, ingen svensk odling av relevans"
+    },
+    {
+      "id": "OLJ-01",
+      "kategori": "Matolja",
+      "namn": "Rapsolja",
+      "enhet": "kr/l",
+      "butikReferens": 58,
+      "ekobutikReferens": 75,
+      "rekoReferens": 85,
+      "malpris": 77,
+      "sakerhet": "Verifierat",
+      "kommentar": null,
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "OLJ-02",
+      "kategori": "Matolja",
+      "namn": "Olivolja",
+      "enhet": "kr/l",
+      "butikReferens": 110,
+      "ekobutikReferens": 140,
+      "rekoReferens": null,
+      "malpris": 115,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Ren importvara, ingen svensk variant",
+      "sourcingStatus": "Ej relevant (importvara)",
+      "sourcingNote": "Ren importvara, ingen svensk variant"
+    },
+    {
+      "id": "VIN-01",
+      "kategori": "Vinäger/syrat",
+      "namn": "Äppelcidervinäger",
+      "enhet": "kr/l",
+      "butikReferens": 55,
+      "ekobutikReferens": 68,
+      "rekoReferens": 65,
+      "malpris": 58,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": null,
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "VIN-02",
+      "kategori": "Vinäger/syrat",
+      "namn": "Surkål",
+      "enhet": "kr/kg",
+      "butikReferens": 75,
+      "ekobutikReferens": 90,
+      "rekoReferens": 55,
+      "malpris": 48,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Billig att göra själv",
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Billig att göra själv (se Hemfabrikat-bladet) – producent ej nödvändig"
+    },
+    {
+      "id": "SVA-01",
+      "kategori": "Svamp",
+      "namn": "Champinjon",
+      "enhet": "kr/kg",
+      "butikReferens": 50,
+      "ekobutikReferens": 65,
+      "rekoReferens": 60,
+      "malpris": 54,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": null,
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Sök gardsnara.se / producenter.se, kategori Svamp"
+    },
+    {
+      "id": "SVA-02",
+      "kategori": "Svamp",
+      "namn": "Kantareller",
+      "enhet": "kr/kg",
+      "butikReferens": 300,
+      "ekobutikReferens": 340,
+      "rekoReferens": 225,
+      "malpris": 200,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Säsongsberoende, självplock kan vara gratis",
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Säsongsberoende, självplock möjligt – annars lokal svampplockare/förening"
+    },
+    {
+      "id": "SAL-01",
+      "kategori": "Salt",
+      "namn": "Havssalt",
+      "enhet": "kr/kg",
+      "butikReferens": 220,
+      "ekobutikReferens": 240,
+      "rekoReferens": 200,
+      "malpris": 190,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": null,
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Möjlig småskalig tillverkare i Alingsås nämnd i sökträff (matvision.se) men namn ej bekräftat – kräver uppföljning"
+    },
+    {
+      "id": "SÖT-01",
+      "kategori": "Sötning",
+      "namn": "Honung",
+      "enhet": "kr/kg",
+      "butikReferens": 165,
+      "ekobutikReferens": 190,
+      "rekoReferens": 200,
+      "malpris": 185,
+      "sakerhet": "Verifierat",
+      "kommentar": "REKO-pris (biodlare, ~200 kr/kg) verifierat",
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "BRÖ-01",
+      "kategori": "Bröd",
+      "namn": "Surdegsbröd",
+      "enhet": "kr/kg",
+      "butikReferens": 62,
+      "ekobutikReferens": 80,
+      "rekoReferens": 95,
+      "malpris": 86,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Butikspris ICA-nivå; hantverksbageri dyrare pga tid/jäsning",
+      "sourcingStatus": null,
+      "sourcingNote": null
+    },
+    {
+      "id": "BRÖ-02",
+      "kategori": "Bröd",
+      "namn": "Knäckebröd/rågbröd",
+      "enhet": "kr/kg",
+      "butikReferens": 65,
+      "ekobutikReferens": 85,
+      "rekoReferens": 100,
+      "malpris": 90,
+      "sakerhet": "Uppskattat (mönster)",
+      "kommentar": "Lokala kvarnar/bagerier ofta märkbart dyrare",
+      "sourcingStatus": "Ingen specifik kandidat – sök via källa",
+      "sourcingNote": "Sök gardsnara.se / matvision.se, kategori Bröd och spannmål, filtrera kvarn/bageri"
+    }
+  ],
+  "producers": [
+    {
+      "namn": "Everhags Gårdsbutik",
+      "region": "Vedum, Västergötland",
+      "egenWebb": "everhagsgardsbutik.se",
+      "sourcingLeveranssatt": "Gårdsbutik, självbetjäning, alltid öppet",
+      "sourcingKalla": "KRAV:s gårdsbutiksguide",
+      "produkter": [
+        "GRÖ-01"
+      ]
+    },
+    {
+      "namn": "Gröna Gårdar AB",
+      "region": "Ljungskile, Bohuslän",
+      "egenWebb": null,
+      "sourcingLeveranssatt": "Gårdsbutik tis-lör",
+      "sourcingKalla": "KRAV:s gårdsbutiksguide (säsongsgrönt, ospecificerat sortiment)",
+      "produkter": [
+        "GRÖ-02",
+        "GRÖ-03",
+        "GRÖ-04",
+        "MEJ-03"
+      ]
+    },
+    {
+      "namn": "Mostorps Gård",
+      "region": "Falkenberg-Halmstad, Halland",
+      "egenWebb": "mostorpsgard.se",
+      "sourcingLeveranssatt": "Gårdsbutik ons-lör, eget gårdsslakteri",
+      "sourcingKalla": "Webbsökning (gårdssajt)",
+      "produkter": [
+        "KÖT-01",
+        "KÖT-04"
+      ]
+    },
+    {
+      "namn": "Fröö Gård",
+      "region": "Norsholm, Östergötland",
+      "egenWebb": "froogard.se",
+      "sourcingLeveranssatt": "Gårdsbutik + obemannad butik (Kött&Mat)",
+      "sourcingKalla": "Webbsökning (gårdssajt)",
+      "produkter": [
+        "KÖT-02"
+      ]
+    },
+    {
+      "namn": "Skottorps Mejeri",
+      "region": "Laholm, Halland",
+      "egenWebb": null,
+      "sourcingLeveranssatt": "Gårdsbutik vid Skottorps Slott",
+      "sourcingKalla": "Webbsökning / matvision.se",
+      "produkter": [
+        "MEJ-01"
+      ]
+    },
+    {
+      "namn": "Löt Gårdsmejeri",
+      "region": "Gammalkil, Östergötland",
+      "egenWebb": "lot-gardsmejeri.se",
+      "sourcingLeveranssatt": "Gårdsbutik, ring innan",
+      "sourcingKalla": "Webbsökning (gårdssajt)",
+      "produkter": [
+        "MEJ-02",
+        "MEJ-04"
+      ]
+    },
+    {
+      "namn": "Gunnarshögs Gård",
+      "region": "Österlen, Skåne",
+      "egenWebb": "gunnarshog.se",
+      "sourcingLeveranssatt": "Gårdsbutik + nätbutik, säsongsöppet",
+      "sourcingKalla": "Webbsökning (säljer torkade svenska örter)",
+      "produkter": [
+        "KRY-01",
+        "KRY-02",
+        "KRY-03",
+        "OLJ-01",
+        "VIN-01"
+      ]
+    },
+    {
+      "namn": "Lovö Honung",
+      "region": "Sundbyberg",
+      "egenWebb": "lovohonung.se",
+      "sourcingLeveranssatt": "Familjeföretag, biodling sedan 1979",
+      "sourcingKalla": "Webbsökning, alt. Gunnarshögs Gård eller Mårdängs (båda säljer honung också)",
+      "produkter": [
+        "SÖT-01"
+      ]
+    },
+    {
+      "namn": "Källdalens Trädgårdar",
+      "region": "Gotland",
+      "egenWebb": "gardsbutiker.se-listning",
+      "sourcingLeveranssatt": "Gårdsbutik + bageri, ekologiskt mjöl",
+      "sourcingKalla": "Webbsökning (gardsbutiker.se)",
+      "produkter": [
+        "BRÖ-01"
+      ]
+    }
+  ]
+}
