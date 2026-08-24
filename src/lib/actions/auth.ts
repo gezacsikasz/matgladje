@@ -34,7 +34,7 @@ export async function loginAction(
     ? requested
     : isAdmin
       ? "/admin"
-      : "/";
+      : "/skafferi";
 
   redirect(target);
 }
