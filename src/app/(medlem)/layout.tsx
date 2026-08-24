@@ -8,6 +8,7 @@ import { fmtDateRange, fmtDate } from "@/lib/format";
 
 const NAV = [
   { href: "/skafferi", label: "Skafferi" },
+  { href: "/korg", label: "Korg" },
   { href: "/min-sida", label: "Min sida" },
 ];
 

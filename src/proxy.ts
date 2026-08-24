@@ -7,7 +7,8 @@ import { auth } from "@/lib/auth";
 export default auth((req) => {
   const { pathname } = req.nextUrl;
   const isAdminRoute = pathname.startsWith("/admin");
-  const isMedlemRoute = pathname.startsWith("/skafferi") || pathname.startsWith("/min-sida");
+  const isMedlemRoute =
+    pathname.startsWith("/skafferi") || pathname.startsWith("/korg") || pathname.startsWith("/min-sida");
 
   const needsRedirect =
     (isAdminRoute && req.auth?.user?.role !== "ADMIN") || (isMedlemRoute && !req.auth?.user);
@@ -20,5 +21,5 @@ export default auth((req) => {
 });
 
 export const config = {
-  matcher: ["/admin/:path*", "/skafferi/:path*", "/min-sida/:path*"],
+  matcher: ["/admin/:path*", "/skafferi/:path*", "/korg/:path*", "/min-sida/:path*"],
 };

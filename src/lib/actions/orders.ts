@@ -59,6 +59,7 @@ export async function addOrderLineAction(
   });
 
   revalidatePath("/skafferi");
+  revalidatePath("/korg");
   revalidatePath("/min-sida");
   return { ok: true };
 }
@@ -67,6 +68,7 @@ export async function removeOrderLineAction(id: string) {
   const household = await requireHousehold();
   await prisma.orderLine.deleteMany({ where: { id, householdId: household.id } });
   revalidatePath("/skafferi");
+  revalidatePath("/korg");
   revalidatePath("/min-sida");
 }
 
@@ -134,5 +136,6 @@ export async function runPersonalShopperAction(periodKey: PeriodKey) {
   }
 
   revalidatePath("/skafferi");
+  revalidatePath("/korg");
   revalidatePath("/min-sida");
 }
